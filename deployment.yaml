@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ep-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ep-demo
+  template:
+    metadata:
+      labels:
+        app: ep-demo
+    spec:
+      containers:
+        - name: ep-demo
+          image: ep-demo:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3001
