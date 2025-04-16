@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: ep-demo
-          image: ngocvd4/ep-demo:latest
-          imagePullPolicy: Always
+          image: ep-demo:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3001
